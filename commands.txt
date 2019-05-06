@@ -1,0 +1,17 @@
+transfer Data from Super8-Camera to PC
+run this in linux terminal:
+(insert your correct path/IP)
+
+scp -r pi@192.168.0.ip_of_pi:/home/pi/Super8 /home/USER/Super8
+
+Get a Live stream of the camera to your PC:
+1.ssh into pi
+2. run this command
+	raspivid -t 0 -l -o tcp://192.168.0.ip_of_pi:3333
+3. on the pc rund this command
+	vlc tcp/h264://192.168.0.ip_of_pi:3333
+
+4. enjoy a laggy  stream, but better than nothing
+
+
+
